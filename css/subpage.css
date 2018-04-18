@@ -67,7 +67,6 @@ input, select ,radio
 .main_content {
 	height: auto !important;
 	min-height: 428px;
-	min-width: 600px;
 }
 
 .content_right_center{
@@ -87,9 +86,6 @@ input, select ,radio
 }
 /************************************************CONTENT END*********************************************************/
 
-.setFtp ,.setTR069,.TraceRoute,.internet{
-	display: none;
-}
 
 .button_wrapper {
 	height: 25px;

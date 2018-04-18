@@ -14,15 +14,3 @@ function TR069Config(){
 		}
 	});
 }
-
-
-//是否启用TR069？
-$(function(){
-	$("#EnableTr069").change(function() { 
-	  if($(this).prop("checked")==true){
-       $('.setTR069').css("display", "block");
-	  }else{
-       $('.setTR069').css("display", "none");
-	  }
-    });
-});

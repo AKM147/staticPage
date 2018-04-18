@@ -17,7 +17,6 @@ function ModuleInfo(){
 
 //模块升级--提交
 function ModuleUpdate(){
-	layer.msg("开始提交....");
 	$.ajax({
 		type:"post",
 		url:"",

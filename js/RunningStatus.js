@@ -1,16 +1,16 @@
 //初始化加载
 $(function(){
-// layer.msg('玩命加载中...', {icon: 16,shade: [0.5, '#999'],scrollbar: false,offset: 'c', time:100000}) ;  
+	deviceInfo();
 });
 
 //设备信息
 function deviceInfo(){
 	$.ajax({
 		type:"get",
-		url:"",
+		url:"/goform/deviceInfo",
 		async:true,
 		success:function(data){
-			
+			alert(data);
 		}
 	});
 }
@@ -18,9 +18,13 @@ function deviceInfo(){
 //CPU使用率
 function CPUUsageRate(){
 	$.ajax({
-		type:"get",
-		url:"",
+		type:"post",
+		url:"/goform/CPUUsageRate",
 		async:true,
+		data:{
+			name:"zhangsan",
+			age:18
+		},
 		success:function(data){
 			
 		}

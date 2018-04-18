@@ -18,7 +18,6 @@ function VersionInfo(){
 
 //版本升级--提交
 function VserionUpdate(){
-	layer.msg("开始提交....");
 	$.ajax({
 		type:"post",
 		url:"",
