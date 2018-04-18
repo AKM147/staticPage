@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="css/subpage.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" src="js/jquery-1.10.1.min.js" type="text/JavaScript"></script>
+<script language="JavaScript" type="text/javascript" src="js/layer.js"></script>
+<script language="JavaScript" src="js/Diagnose.js" type="text/JavaScript"></script>
+</head>
+<body>
+
+<form id="logout" name="details" method="post" action="/action/logout">
+</form>
+
+<div id="target" action="/action/sumbitProc" method="post">
+	<input id="localparam" name="localparam" value="" type="hidden">
+	<input id="localurl" name="localurl" value="/overview.asp" type="hidden">
+	<div class="main_content">
+		<div class="content_right_title"> <span>诊断</span></div>
+		<div class="content_right_center" style="border-bottom: 1px solid #666;padding-bottom: 15px;">
+             <!--模块信息-->
+			<div class="content_item_title">方式</div>
+			<div class="content_item" id="uptime_contentitem" style="min-height:20px;">
+				<div class="content_item_left">诊断方法</div>
+				<div class="content_item_right" id="DiagnoseType">
+					<input type="radio" name="identity" value="1" checked="checked" style="width: 16px;height: 16px;">　Ping <br/>
+					<input type="radio" name="identity" value="2" style="width: 16px;height: 16px;">　TraceRoute
+				</div>
+			</div>
+			<div class="content_item_title DiagT">Ping</div>
+			<!--选择方式-->
+			<!--Ping-->
+			<div class="content_item Ping" id="uptime_contentitem" style="min-height:20px;">
+				<div class="content_item_left">目的IP地址或域</div>
+				<div class="content_item_right" id="uptime"><input type="text" name="" id="" value="" />　*</div>
+			</div>
+			<div class="content_item Ping" id="uptime_contentitem" style="min-height:20px;">
+				<div class="content_item_left">包大小</div>
+				<div class="content_item_right" id="uptime">
+					<input type="text" name="" id="" value="" />　*字节（1~9000）
+				</div>
+			</div>
+			<div class="content_item Ping" id="uptime_contentitem" style="min-height:20px;">
+				<div class="content_item_left">超时时间</div>
+				<div class="content_item_right" id="uptime">
+					<input type="text" name="" id="" value="" />　*秒（1~10）
+				</div>
+			</div>
+			<div class="content_item Ping" id="uptime_contentitem" style="min-height:20px;">
+				<div class="content_item_left">个数</div>
+				<div class="content_item_right" id="uptime">
+					<input type="text" name="" id="" value="" />　*次数
+				</div>
+			</div>
+            <!--TraceRoute-->
+            <div class="content_item TraceRoute" id="uptime_contentitem" style="min-height:20px;">
+				<div class="content_item_left">目的IP地址或域</div>
+				<div class="content_item_right" id="uptime"><input type="text" name="" id="" value="" />　*</div>
+			</div>
+			<div class="content_item TraceRoute" id="uptime_contentitem" style="min-height:20px;">
+				<div class="content_item_left">最大跳数</div>
+				<div class="content_item_right" id="uptime">
+					<input type="text" name="" id="" value="" />　*（1~30）
+				</div>
+			</div>
+			<div class="content_item TraceRoute" id="uptime_contentitem" style="min-height:20px;">
+				<div class="content_item_left">超时时间</div>
+				<div class="content_item_right" id="uptime">
+					<input type="text" name="" id="" value="" />　*秒（1~10）
+				</div>
+			</div>
+        
+        <div class="reset" style="width: 100%;height: 30px;margin:40px 0 0 0;">
+			<div style="float: right;margin-right: 10%;">
+				<button class="operateType" style="width: 100px;height: 30px;"> Ping </button>
+			    <button style="width: 100px;height: 30px;"> 取消 </button>
+			</div>
+		</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+</body></html>

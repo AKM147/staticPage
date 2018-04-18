@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="css/subpage.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" src="js/jquery-1.10.1.min.js" type="text/JavaScript"></script>
+<script language="JavaScript" type="text/javascript" src="js/layer.js"></script>
+<script language="JavaScript" src="js/settingWH.js" type="text/JavaScript"></script>
+</head>
+<body>
+
+<form id="logout" name="details" method="post" action="/action/logout">
+</form>
+
+<div id="target" >
+	<input id="localparam" name="localparam" value="" type="hidden">
+	<input id="localurl" name="localurl" value="/overview.asp" type="hidden">
+	<div class="main_content">
+		<div class="content_right_title"> <span>维护设置</span></div>
+		<div class="content_right_center">
+             <!--模块信息-->
+			<div class="content_item_title">重启</div>
+			<div class="content_item" id="uptime_contentitem" style="min-height:20px;border-bottom: 1px solid #666;padding-bottom: 10px;">
+				<div class="content_item">请单击重启按钮进行重启</div>
+				<button onclick="restartDevice()" style="width: 80px;height: 25px;border-radius: 2px;"> 重启 </button>
+			</div>
+			
+			<div class="content_item_title">恢复出厂</div>
+			<div class="content_item" id="uptime_contentitem" style="min-height:20px;border-bottom: 1px solid #666;padding-bottom: 10px;">
+				<div class="content_item">请单击恢复出厂按钮进行恢复出厂操作</div>
+				<button onclick="RestoreSetting()" style="width: 80px;height: 25px;border-radius: 2px;"> 恢复出厂 </button>
+			</div>
+			
+			<div class="content_item_title">下载配置文件</div>
+			<div class="content_item" id="uptime_contentitem" style="min-height:20px;border-bottom: 1px solid #666;padding-bottom: 10px;">
+				<div class="content_item">点击下载当前配置文件</div>
+				<button onclick="DownloadConfig()" style="width: 80px;height: 25px;border-radius: 2px;"> 下载 </button>
+			</div>
+            
+            <div class="content_item_title">恢复配置文件</div>
+			<div class="content_item" id="uptime_contentitem" style="min-height:20px;border-bottom: 1px solid #666;padding-bottom: 10px;">
+				<div class="content_item">要恢复配置文件，找到本地配置文件，导入文件，点击上传文件</br>
+					配置文件    <input type="file"/>
+				</div>
+				<button onclick="RestoreConfig()" style="width: 80px;height: 25px;border-radius: 2px;margin-top: 15px;" > 上传 </button>
+			</div>
+			
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+</body></html>
