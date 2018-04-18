@@ -14,15 +14,3 @@ function FTPConfig(){
 		}
 	});
 }
-
-
-//是否启用版本升级？
-$(function(){
-	$("#EnableFtp").change(function() { 
-	  if($(this).prop("checked")==true){
-       $('.setFtp').css("display", "block");
-	  }else{
-       $('.setFtp').css("display", "none");
-	  }
-    });
-});

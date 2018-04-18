@@ -2,7 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link href="css/subpage.css" type="text/css" rel="stylesheet">
 <script language="JavaScript" src="js/jquery-1.10.1.min.js" type="text/JavaScript"></script>
-<script language="JavaScript" type="text/javascript" src="js/layer.js"></script>
 <script language="JavaScript" src="js/ftpUpdate.js" type="text/JavaScript"></script>
 </head>
 <body>
@@ -10,7 +9,7 @@
 <form id="logout" name="details" method="post" action="/action/logout">
 </form>
 
-<div id="target" action="/action/sumbitProc" method="post">
+<form id="target" action="/action/sumbitProc" method="post">
 	<input id="localparam" name="localparam" value="" type="hidden">
 	<input id="localurl" name="localurl" value="/overview.asp" type="hidden">
 	<div class="main_content">
@@ -20,61 +19,11 @@
 			<div class="content_item_title">配置</div>
 			<div class="content_item" id="uptime_contentitem" style="min-height:20px;">
 				<div class="content_item_left">FTP版本升级</div>
-				<div class="content_item_right" id="uptime">
-					<input id="EnableFtp" type="checkbox" style="width: 16px;height: 16px;"/>　启用
-				</div>
+				<div class="content_item_right" id="uptime"><input type="checkbox" style="width: 16px;height: 16px;">　启用</div>
 			</div>
-			<!--启用ftp版本升级   开始-->
-			<div class="content_item setFtp" id="uptime_contentitem" style="min-height:20px;">
-				<div class="content_item_left">联网后检查新版本</div>
-				<div class="content_item_right" id="uptime">
-					<input id="EnableLwjcxbb" type="checkbox" style="width: 16px;height: 16px;"/>　启用
-				</div>
-			</div>
-            <div class="content_item setFtp" id="uptime_contentitem" style="min-height:20px;">
-				<div class="content_item_left">升级路径</div>
-				<div class="content_item_right" id="uptime">
-					<input type="text" name="" id="" value="" />　ftp://xxx（1~9000）
-				</div>
-			</div>
-			<div class="content_item setFtp" id="uptime_contentitem" style="min-height:20px;">
-				<div class="content_item_left">版本文件</div>
-				<div class="content_item_right" id="uptime">
-					<input type="text" name="" id="" value="" />　*
-				</div>
-			</div>
-			<div class="content_item setFtp" id="uptime_contentitem" style="min-height:20px;">
-				<div class="content_item_left">用户名</div>
-				<div class="content_item_right" id="uptime">
-					<input type="text" name="" id="" value="" />　*
-				</div>
-			</div>
-			<div class="content_item setFtp" id="uptime_contentitem" style="min-height:20px;">
-				<div class="content_item_left">密码</div>
-				<div class="content_item_right" id="uptime">
-					<input type="password" name="" id="" value="" />　*
-				</div>
-			</div>
-			<div class="content_item setFtp" id="uptime_contentitem" style="min-height:20px;">
-				<div class="content_item_left">检查新版本</div>
-				<div class="content_item_right" id="uptime">
-					<input type="checkbox" name="" id="" value="" style="width: 16px;height: 16px;" />
-					<input type="text" name="" id="" value="" />　小时（1~740）
-				</div>
-			</div>
-			<div class="content_item setFtp" id="uptime_contentitem" style="min-height:20px;">
-				<div class="content_item_left">开始时间（24小时）</div>
-				<div class="content_item_right" id="uptime">
-					<input type="text" name="" id="" value="" />　
-				</div>
-			</div>
-			<div class="content_item setFtp" id="uptime_contentitem" style="min-height:20px;">
-				<div class="content_item_left">随机时间</div>
-				<div class="content_item_right" id="uptime">
-					<input type="text" name="" id="" value="" />　
-				</div>
-			</div>
-        <!--启用ftp版本升级   结束-->
+			
+            
+        
         <div class="reset" style="width: 100%;height: 30px;margin:40px 0 0 0;">
 			<div style="float: right;margin-right: 10%;">
 				<button style="width: 100px;height: 30px;"> 提交 </button>
@@ -83,7 +32,7 @@
 		</div>
 		</div>
 	</div>
-</div>
+</form>
 
 
 

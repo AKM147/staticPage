@@ -17,15 +17,14 @@ function LANConfig(){
 
 //DHCP配置--提交
 function DHCPConfig(){
-	layer.msg("开始提交了......");
-	/*$.ajax({
+	$.ajax({
 		type:"post",
 		url:"",
 		async:true,
 		success:function(data){
 			
 		}
-	});*/
+	});
 }
 
 //绑定地址列表--获取
@@ -51,14 +50,3 @@ function AddDevice(){
 		}
 	});
 }
-
-//是否启用
-$(function(){
-	$("#Enable").change(function() { 
-	  if($(this).prop("checked")==true){
-	  	 $('.ipsetting').removeAttr("disabled");
-	  }else{
-	  	$('.ipsetting').attr("disabled", true);
-	  }
-    });
-});
