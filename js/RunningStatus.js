@@ -1,36 +1,41 @@
 //初始化加载
 $(function(){
 	deviceInfo();
+	setInterval('doWork()',5000);
 });
+function doWork(){
+	WANStatus();
+	LANStatus();
+}
+//系统信息
 
+function sysInfo(){
+	$.ajax({
+		type:"get",
+		url:"/goform/sysInfo",
+		async:true,
+		type:json,
+		success:function(data){
+		}
+	});
+}
 //设备信息
 function deviceInfo(){
 	$.ajax({
 		type:"get",
 		url:"/goform/deviceInfo",
 		async:true,
+		dataType:'json',
 		success:function(data){
-			alert(data);
+			alert(data.product_Modle);
+			$('#product_Name').text(data.product_Name);
+			$('#product_Modle').text(data.product_Modle);
+			$('#hw_ver').text(data.hw_ver);
+			$('#fw_ver').text(data.fw_ver);
+
 		}
 	});
 }
-
-//CPU使用率
-function CPUUsageRate(){
-	$.ajax({
-		type:"post",
-		url:"/goform/CPUUsageRate",
-		async:true,
-		data:{
-			name:"zhangsan",
-			age:18
-		},
-		success:function(data){
-			
-		}
-	});
-}
-
 
 //内存使用率
 function MemoryUsageRate(){
@@ -47,10 +52,23 @@ function MemoryUsageRate(){
 function WANStatus(){
 	$.ajax({
 		type:"get",
-		url:"",
+		url:"/goform/WANStatus",
 		async:true,
-		success:function(data){
-			
+		dataType:'json',
+		data:{
+			//name:"zhangsan",
+			//age:18
+		},
+		success:function(data){	
+			$('#netmode').text(data.netmode);
+			$('#netStatus').text(data.netStatus);
+			$('#simStatus').text(data.simStatus);
+			$('#ecmStatus').text(data.ecmStatus);
+			$('#csq').text(data.csq);
+			$('#APN').text(data.apn);
+			$('#wanip').text(data.wanip);
+			$('#wanmask').text(data.wanmask);
+			$('#wanmac').text(data.wanmac);
 		}
 	});
 }
@@ -59,10 +77,13 @@ function WANStatus(){
 function LANStatus(){
 	$.ajax({
 		type:"get",
-		url:"",
+		url:"/goform/LANStatus",
 		async:true,
+		dataType:'json',
 		success:function(data){
-			
+			$('#lanIp').text(data.lanip);
+			$('#lanMask').text(data.lanmask);
+			$('#lanMac').text(data.lanmac);			
 		}
 	});
 }

@@ -4,13 +4,30 @@ $(function(){
 });
 
 //LAN主机配置 --提交
-function LANConfig(){
+function settingLAN(){
 	$.ajax({
-		type:"post",
-		url:"",
+		type:"get",
+		url:"/goform/settingLAN",
+		async:true,
+		data:{
+			lanip:$('#lanip').val(),
+			netmask:$('#netmask').val(),
+		},
+		
+		success:function(data){ 
+			alert(data)
+		}
+	});
+}
+
+//LAN主机配置 --查询
+function queryLAN(){
+	$.ajax({
+		type:"get",
+		url:"/goform/queryLAN",
 		async:true,
 		success:function(data){
-			
+			$('#lanip').val(data)
 		}
 	});
 }

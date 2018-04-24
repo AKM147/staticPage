@@ -9,7 +9,7 @@
 <form id="logout" name="details" method="post" action="/action/logout">
 </form>
 
-<form id="target" action="/action/sumbitProc" method="post">
+<div id="target" method="post">
 	<input id="localparam" name="localparam" value="" type="hidden">
 	<input id="localurl" name="localurl" value="/overview.asp" type="hidden">
 	<div class="main_content">
@@ -19,7 +19,7 @@
 			<div class="content_item_title">模块信息</div>
 			<div class="content_item" id="uptime_contentitem" style="min-height:20px;">
 				<div class="content_item_left">模块型号</div>
-				<div class="content_item_right" id="uptime">MH8041</div>
+				<div class="content_item_right" id="uptime">EM300-118</div>
 			</div>
 			<div class="content_item" id="onlinetime_contentitem" style="min-height:20px;">
 				<div class="content_item_left">模块版本</div>
@@ -37,7 +37,7 @@
             <div class="content_item" id="uptime_contentitem" style="min-height:20px;">
 				<div class="content_item_left">APN设置</div>
 				<div class="content_item_right" id="uptime">
-					<input value="255.255.255.0"/>   
+					<input id="apn" value=""/>   
 			    </div>
 			<!--<div class="content_item" id="uptime_contentitem" style="min-height:20px;">
 				<div class="content_item_left">连接方式</div>
@@ -51,20 +51,10 @@
             
 		<div class="reset" style="width: 100%;height: 30px;margin:40px 0 100px 0;">
 			<div style="float: right;margin-right: 10%;">
-				<button style="width: 100px;height: 30px;"> 提交 </button>
-			    <button style="width: 100px;height: 30px;"> 取消 </button>
+				<button style="width: 100px;height: 30px;"onclick="SettingAPN()"> 提交 </button>
+			    <button style="width: 100px;height: 30px;"onclick="QueryAPN()"> 查询</button>
 			</div>
 		</div>
 	</div>
-</form>
-
-
-
-
-
-
-
-
-
-
+</div>
 </body></html>

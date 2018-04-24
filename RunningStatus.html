@@ -19,26 +19,33 @@
 			<div class="content_item_title">系统信息</div>
 			<div class="content_item" id="uptime_contentitem" style="min-height:20px;">
 				<div class="content_item_left">运行时间</div>
-				<div class="content_item_right" id="uptime">00天 03时 56分 </div>
+				<div class="content_item_right" id="worktime">00天 03时 56分 </div>
 			</div>
-			<div class="content_item" id="onlinetime_contentitem" style="min-height:20px;">
+			<div class="content_item" id="uptime_contentitem" style="min-height:20px;">
+				<div class="content_item_left">CPU使用率</div>
+				<div class="content_item_right" id="CPURate">50%</div>
+			</div>
+			<div class="content_item" id="uptime_contentitem" style="min-height:20px;">
+				<div class="content_item_left">内存使用率</div>
+				<div class="content_item_right" id="MEMRate">40%</div>
+			</div>
+<!--			<div class="content_item" id="onlinetime_contentitem" style="min-height:20px;">
 				<div class="content_item_left">在线时间</div>
 				<div class="content_item_right" id="onlinetime">00天 00时 00分 </div>
-			</div>
-
+			</div>-->
 
             <!--设备信息-->
 			<div class="content_item_title">设备信息</div>
 			<div id="id_model_name" style="">
 				<div class="content_item" id="productName_contentitem" style="min-height:20px;">
 					<div class="content_item_left">产品名称</div>
-					<div class="content_item_right" id="productName">MLH2622</div>
+					<div class="content_item_right" id="product_Name">SY-CPE</div>
 				</div>
 			</div>
 			<div id="id_model_name" style="">
 				<div class="content_item" id="productName_contentitem" style="min-height:20px;">
 					<div class="content_item_left">产品型号</div>
-					<div class="content_item_right" id="productName">MLH2622</div>
+					<div class="content_item_right" id="product_Modle">SY-CPE_V01.00</div>
 				</div>
 			</div>
 			<div id="id_hwVer">
@@ -49,63 +56,79 @@
 			</div>
 			<div class="content_item" id="fwinfo_contentitem" style="min-height:20px;">
 				<div class="content_item_left">软件版本</div>
-				<div class="content_item_right" id="fwinfo">MH-30123-V0.1-DM100</div>
+				<div class="content_item_right" id="fw_ver">MH-30123-V0.1-DM100</div>
 			</div>
-			<div class="content_item" id="serial_id_contentitem" style="min-height:20px;">
+<!--			<div class="content_item" id="serial_id_contentitem" style="min-height:20px;">
 				<div class="content_item_left">产品序列号</div>
-				<div class="content_item_right" id="serial_id">--</div>
-			</div>
-            <!--CPU使用率-->
-			<div class="content_item_title">CPU使用率</div>
+				<div class="content_item_right" id="product_SN">--</div>
+			</div>-->
+<!--            <!--CPU使用率-->
+<!--			<div class="content_item_title">CPU使用率</div>
 			<div class="content_item" id="cpu_current_contentitem" style="min-height:20px;">
 				<div class="content_item_left">当前值</div>
 				<div class="content_item_right" id="cpu_current">25 %</div>
-			</div>
+			</div>-->
             <!--内存使用率-->
-			<div class="content_item_title">内存使用率</div>
+<!--			<div class="content_item_title">内存使用率</div>
 			
 			<div class="content_item" id="mem_current_contentitem" style="min-height:20px;">
 				<div class="content_item_left">当前值</div>
 				<div class="content_item_right" id="mem_current">43 %</div>
-			</div>
+			</div>-->
              <!--WAN口状态-->
 			<div class="content_item_title">WAN口状态</div>
-			<div class="content_item" id="simStatus_contentitem" style="min-height:20px;">
-				<div class="content_item_left">SIM卡状态</div>
-				<div class="content_item_right" id="simStatus">SIM卡未准备完成</div>
+			<div class="content_item" id="netmode_contentitem" style="min-height:20px;">
+				<div class="content_item_left">网络制式</div>
+				<div class="content_item_right" id="netmode">--</div>
 			</div>
 			<div class="content_item" id="currStatus_contentitem" style="min-height:20px;">
-				<div class="content_item_left">当前状态</div>
-				<div class="content_item_right" id="currStatus">SIM卡未准备完成</div>
+				<div class="content_item_left">网络状态</div>
+				<div class="content_item_right" id="netStatus">--</div>
 			</div>
-			<div class="content_item" id="signal_contentitem" style="min-height:20px;">
-					<div class="content_item_left">信号强度</div>
-					<div class="content_item_right" id="signal">--</div>
+			<div class="content_item" id="simStatus_contentitem" style="min-height:20px;">
+				<div class="content_item_left">SIM卡状态</div>
+				<div class="content_item_right" id="simStatus">--</div>
 			</div>
-			<div class="content_item" id="operator_contentitem" style="min-height:20px;">
-				<div class="content_item_left">IMSI</div>
-				<div class="content_item_right" id="operator">--</div>
+			<div class="content_item" id="currStatus_contentitem" style="min-height:20px;">
+				<div class="content_item_left">连接状态</div>
+				<div class="content_item_right" id="ecmStatus">--</div>
 			</div>
-			<div class="content_item" id="lanIp_contentitem" style="min-height:20px;">
-				<div class="content_item_left">IP地址</div>
-				<div class="content_item_right" id="lanIp">192.168.1.1</div>
-			</div>
-			<div class="content_item" id="lanIp_contentitem" style="min-height:20px;">
-				<div class="content_item_left">APN</div>
-				<div class="content_item_right" id="lanIp">192.168.1.1</div>
-			</div>
-			<div id="id_msisdn" style="">
+
+<!--			<div id="id_msisdn" style="">
 				<div class="content_item" id="msisdn_contentitem" style="min-height:20px;">
 					<div class="content_item_left">小区号</div>
 					<div class="content_item_right" id="msisdn">--</div>
 				</div>
+			</div>-->
+			<div class="content_item" id="signal_contentitem" style="min-height:20px;">
+					<div class="content_item_left">信号强度</div>
+					<div class="content_item_right" id="csq">--</div>
 			</div>
+			<div class="content_item" id="lanIp_contentitem" style="min-height:20px;">
+				<div class="content_item_left">APN</div>
+				<div class="content_item_right" id="APN">--</div>
+			</div>
+<!--			<div class="content_item" id="operator_contentitem" style="min-height:20px;">
+				<div class="content_item_left">IMSI</div>
+				<div class="content_item_right" id="operator">--</div>
+			</div>-->
+			<div class="content_item" id="lanIp_contentitem" style="min-height:20px;">
+				<div class="content_item_left">IP地址</div>
+				<div class="content_item_right" id="wanip">--</div>
+			</div>
+			<div class="content_item" id="lanIp_contentitem" style="min-height:20px;">
+				<div class="content_item_left">子网掩码</div>
+				<div class="content_item_right" id="wanmask">--</div>
+			</div>
+			<div class="content_item" id="lanIp_contentitem" style="min-height:20px;">
+				<div class="content_item_left">MAC地址</div>
+				<div class="content_item_right" id="wanmac">--</div>
+			</div>
+
+
 			<!--LAN口状态-->
 			<div class="content_item_title">LAN口状态</div>
-			<div class="content_item" id="lanMac_contentitem" style="min-height:20px;">
-				<div class="content_item_left">MAC地址</div>
-				<div class="content_item_right" id="lanMac">A8:93:52:0A:19:05</div>
-			</div>
+
 			<div class="content_item" id="lanIp_contentitem" style="min-height:20px;">
 				<div class="content_item_left">IP地址</div>
 				<div class="content_item_right" id="lanIp">192.168.1.1</div>
@@ -113,6 +136,10 @@
 			<div class="content_item" id="lanMask_contentitem" style="min-height:20px;">
 				<div class="content_item_left">子网掩码 </div>
 				<div class="content_item_right" id="lanMask">255.255.255.0</div>
+			</div>
+			<div class="content_item" id="lanMac_contentitem" style="min-height:20px;">
+				<div class="content_item_left">MAC地址</div>
+				<div class="content_item_right" id="lanMac">A8:93:52:0A:19:05</div>
 			</div>
 			<!--设备列表-->
 			<div style="" id="id_devListDiv">
@@ -131,7 +158,7 @@
 			</div>
 		</div>
 		<div class="reset" style="width: 100%;height: 30px;margin:40px 0 100px 0;text-align: center;">
-			<button style="width: 100px;height: 30px;" onclick="CPUUsageRate()"> 提交 </button>
+			<button style="width: 100px;height: 30px;" onclick="LANStatus()"> 提交 </button>
 		</div>
 	</div>
 </div>

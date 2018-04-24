@@ -9,7 +9,7 @@
 <form id="logout" name="details" method="post" action="/action/logout">
 </form>
 
-<form id="target" action="/action/sumbitProc" method="post">
+<div id="target" method="post">
 	<input id="localparam" name="localparam" value="" type="hidden">
 	<input id="localurl" name="localurl" value="/overview.asp" type="hidden">
 	<div class="main_content">
@@ -19,12 +19,18 @@
 			<div class="content_item_title">LAN主机配置</div>
 			<div class="content_item" id="uptime_contentitem" style="min-height:20px;">
 				<div class="content_item_left">IP地址</div>
-				<div class="content_item_right" id="uptime"><input value="255.255.255.0"/>   *</div>
+				<div class="content_item_right" id="uptime"><input id="lanip" value=""/>*格式：255.255.255.0*</div>
 			</div>
 			<div class="content_item" id="onlinetime_contentitem" style="min-height:20px;">
 				<div class="content_item_left">子网掩码</div>
-				<div class="content_item_right" id="uptime"><input value="255.255.255.0"/>    *   格式：255.255.255.*</div>
+				<div class="content_item_right" id="uptime"><input id="netmask" value=""/>*格式：255.255.255.0*</div>
 			</div>
+		<div class="reset" style="width: 100%;height: 30px;margin:40px 0 100px 0;">
+			<div style="float: right;margin-right: 10%;">
+				<button style="width: 100px;height: 30px;" onclick="settingLAN()"> 提交 </button>
+			    <button style="width: 100px;height: 30px;" onclick="queryLAN()"> 查询 </button>
+			</div>
+		</div>
         <div class="content_item_title"> <span>DHCP配置</span></div>
             <div class="content_item" id="uptime_contentitem" style="min-height:20px;">
 				<div class="content_item_left">DHCP服务器</div>
@@ -46,7 +52,7 @@
 		<div class="reset" style="width: 100%;height: 30px;margin:40px 0 100px 0;">
 			<div style="float: right;margin-right: 10%;">
 				<button style="width: 100px;height: 30px;"> 提交 </button>
-			    <button style="width: 100px;height: 30px;"> 取消 </button>
+			    <button style="width: 100px;height: 30px;"> 查询 </button>
 			</div>
 		</div>
 		<div class="content_item_title"> <span>绑定地址列表</span></div>
@@ -72,7 +78,7 @@
 				</table>
 			</div>
 	</div>
-</form>
+</div>
 
 
 
