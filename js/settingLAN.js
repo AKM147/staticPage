@@ -26,8 +26,10 @@ function queryLAN(){
 		type:"get",
 		url:"/goform/queryLAN",
 		async:true,
+		dataType:'json',
 		success:function(data){
-			$('#lanip').val(data)
+			$('#lanip').val(data.lanip);
+			$('#netmask').val(data.netmask)
 		}
 	});
 }

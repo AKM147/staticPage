@@ -4,13 +4,13 @@ $(function(){
 });
 
 //重启 --提交
-function restartDevice(){
+function resetDev(){
 	$.ajax({
-		type:"post",
-		url:"",
+		type:"get",
+		url:"/goform/resetDev",
 		async:true,
 		success:function(data){
-			
+			alert("请重新连接设备！");
 		}
 	});
 }

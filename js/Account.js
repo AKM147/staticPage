@@ -5,25 +5,25 @@ $(function(){
 
 
 //修改密码--提交
-function ChangePasword(){
+function settingPW(){
 	$.ajax({
-		type:"post",
-		url:"",
+		type:"get",
+		url:"/goform/settingPW",
 		async:true,
+		//dateType:'json',
+		data:{
+			//userName:$('#userName').val(),
+			currPW:$('#currPW').val(),
+			newPW:$('#newPW').val()
+		},
 		success:function(data){
-			
+			alert(data); 
 		}
 	});
 }
 
 //配置 --提交
-function AccountCofig(){
-	$.ajax({
-		type:"post",
-		url:"",
-		async:true,
-		success:function(data){
-			
-		}
-	});
+function cancelPW(){
+	currPW:$('#currPW').val("");
+	newPW:$('#newPW').val("");
 }

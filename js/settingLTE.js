@@ -2,17 +2,19 @@
 $(function(){
 });
 
-//模块信息
-function ModuleInfo(){
+//IMSI--查询
+function queryIMSI(){
 	$.ajax({
 		type:"get",
-		url:"",
+		url:"/goform/queryIMSI",
 		async:true,
 		success:function(data){
+			//console.log("fanhuizhi"+data)
+			apn:$('#IMSI').val(data)
+			
 		}
 	});
 }
-
 //APN设置--提交
 function SettingAPN(){
 	$.ajax({

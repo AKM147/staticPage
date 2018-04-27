@@ -9,7 +9,7 @@
 <form id="logout" name="details" method="post" action="/action/logout">
 </form>
 
-<form id="target" action="/action/sumbitProc" method="post">
+<div id="target" method="post">
 	<input id="localparam" name="localparam" value="" type="hidden">
 	<input id="localurl" name="localurl" value="/overview.asp" type="hidden">
 	<div class="main_content">
@@ -19,7 +19,7 @@
 			<div class="content_item_title">重启</div>
 			<div class="content_item" id="uptime_contentitem" style="min-height:20px;border-bottom: 1px solid #666;padding-bottom: 10px;">
 				<div class="content_item">请单击重启按钮进行重启</div>
-				<button style="width: 80px;height: 25px;border-radius: 2px;"> 提交 </button>
+				<button style="width: 80px;height: 25px;border-radius: 2px;" onclick="resetDev()"> 提交 </button>
 			</div>
 			
 			<div class="content_item_title">恢复出厂</div>
@@ -28,7 +28,7 @@
 				<button style="width: 80px;height: 25px;border-radius: 2px;"> 恢复出厂 </button>
 			</div>
 			
-			<div class="content_item_title">下载配置文件</div>
+<!--			<div class="content_item_title">下载配置文件</div>
 			<div class="content_item" id="uptime_contentitem" style="min-height:20px;border-bottom: 1px solid #666;padding-bottom: 10px;">
 				<div class="content_item">点击下载当前配置文件</div>
 				<button style="width: 80px;height: 25px;border-radius: 2px;"> 下载 </button>
@@ -40,10 +40,10 @@
 					配置文件    <input type="file"/>
 				</div>
 				<button style="width: 80px;height: 25px;border-radius: 2px;margin-top: 15px;" > 上传 </button>
-			</div>
+			</div>-->
 			
 	</div>
-</form>
+</div>
 
 
 

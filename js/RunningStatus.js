@@ -1,9 +1,11 @@
 //初始化加载
 $(function(){
+	doWork();
 	deviceInfo();
-	setInterval('doWork()',5000);
+	setInterval('doWork()',10000);
 });
 function doWork(){
+	sysInfo();
 	WANStatus();
 	LANStatus();
 }
@@ -14,8 +16,9 @@ function sysInfo(){
 		type:"get",
 		url:"/goform/sysInfo",
 		async:true,
-		type:json,
+		dataType:'json',
 		success:function(data){
+			$('#uptime').text(data.uptime);
 		}
 	});
 }
@@ -27,7 +30,7 @@ function deviceInfo(){
 		async:true,
 		dataType:'json',
 		success:function(data){
-			alert(data.product_Modle);
+			//alert(data.product_Modle);
 			$('#product_Name').text(data.product_Name);
 			$('#product_Modle').text(data.product_Modle);
 			$('#hw_ver').text(data.hw_ver);
