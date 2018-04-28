@@ -1,11 +1,13 @@
 //初始化加载
 $(function(){
+	sysInfo();
 	doWork();
 	deviceInfo();
+	setInterval('sysInfo()',60);
 	setInterval('doWork()',10000);
 });
 function doWork(){
-	sysInfo();
+	//sysInfo();
 	WANStatus();
 	LANStatus();
 }

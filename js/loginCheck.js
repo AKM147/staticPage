@@ -38,15 +38,21 @@ function loginCheck(){
 	//登陆表单验证
 	if(validate().form()){
       $.cookie('netstats', '1'); 		//验证通过
-		alert("开始提交");
-		/*$.ajax({
+		layer.msg("开始提交");
+		$.ajax({
 		type:"get",
-		url:"/goform/settingAPN1111",
+		url:"/goform/loginCheck",
 		async:true,
 		data : $("#loginForm").serialize(),
 		success:function(data){
+			if ('1' == data) {
+				window.location.replace("index.html");
+			} else{
+				alert("用户名或密码错误");
+				layer.msg("用户名或密码错误")
+			}
 			console.log("fanhuizhi"+data)
 		}
-	});*/
+	});
 	}
 }
