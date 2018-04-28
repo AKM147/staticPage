@@ -37,8 +37,6 @@ function validate(){
 function loginCheck(){
 	//登陆表单验证
 	if(validate().form()){
-      $.cookie('netstats', '1'); 		//验证通过
-		layer.msg("开始提交");
 		$.ajax({
 		type:"get",
 		url:"/goform/loginCheck",
@@ -46,10 +44,12 @@ function loginCheck(){
 		data : $("#loginForm").serialize(),
 		success:function(data){
 			if ('1' == data) {
-				window.location.replace("index.html");
+				var loginstate=new Date(); 
+                loginstate.setTime(date.getTime()+5*60*1000); //设置有效时间为5分钟
+                $.cookie('netstats', '1', { expires: loginstate });  
+	            window.location.replace("index.html");
 			} else{
-				alert("用户名或密码错误");
-				layer.msg("用户名或密码错误")
+				layer.msg('用户名或者密码错误!', {  icon : 2,  time : 1000   });
 			}
 			console.log("fanhuizhi"+data)
 		}
