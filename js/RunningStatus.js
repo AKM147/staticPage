@@ -3,7 +3,7 @@ $(function(){
 	sysInfo();
 	doWork();
 	deviceInfo();
-	setInterval('sysInfo()',60);
+	setInterval('sysInfo()',1000);
 	setInterval('doWork()',10000);
 });
 function doWork(){
@@ -32,7 +32,6 @@ function deviceInfo(){
 		async:true,
 		dataType:'json',
 		success:function(data){
-			//alert(data.product_Modle);
 			$('#product_Name').text(data.product_Name);
 			$('#product_Modle').text(data.product_Modle);
 			$('#hw_ver').text(data.hw_ver);
