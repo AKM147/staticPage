@@ -34,11 +34,17 @@
 				<div class="content_item_right" id="onlinetime">--</div>
 			</div>
             <div class="content_item_title"> <span>版本升级</span></div>
-                <div class="content_item" id="uptime_contentitem" style="min-height:20px;">
-				 <div class="content_item">版本文件 　  <input type="file"/></div>
-            </div>
-            <button style="width: 70px;height: 23px;border-radius:5px;"> 提交 </button>
+                <form id="softupdate" action=/goform/upldForm method=POST enctype="multipart/form-data">  
+				    
+                	<div class="content_item" id="uptime_contentitem" style="min-height:20px;">
+				        选择文件:<input class="inputContent" id="fileupload" type="file" name="fileupload" size=60 value="">
+				        
+				        <input style="width: 100px;height:25px;" type="submit" name="update" value="提交" ></input>  
+				
+				</div>
+                </form>
         </div>
+
 	</div>
 </div>
 

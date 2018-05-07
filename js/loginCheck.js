@@ -43,11 +43,12 @@ function loginCheck(){
 		async:true,
 		data : $("#loginForm").serialize(),
 		success:function(data){
-			if ('1' == data) {
+			if (parseInt(data)==1) {
 				var loginstate=new Date(); 
-                loginstate.setTime(date.getTime()+5*60*1000); //设置有效时间为5分钟
-                $.cookie('netstats', '1', { expires: loginstate });  
+              loginstate.setTime(new Date().getTime()+5*60*1000); //设置有效时间为5分钟
+              $.cookie('netstats', '1', { expires: loginstate });  
 	            window.location.replace("index.html");
+	            
 			} else{
 				layer.msg('用户名或者密码错误!', {  icon : 2,  time : 1000   });
 			}

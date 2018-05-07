@@ -18,13 +18,15 @@ function doWork(){
 //系统信息
 var totalTime = 0;
 function sysInfo(){
+	//alert(1);
 	$.ajax({
 		type:"get",
 		url:"/goform/sysInfo",
 		async:true,
 		dataType:'json',
 		success:function(data){
-		totalTime = parseInt(data.uptime);
+		//	alert(data.uptime);
+			totalTime = parseInt(data.uptime);
 			setInterval('jisuan()',1000);
 			
 			
@@ -74,10 +76,9 @@ function deviceInfo(){
 		async:true,
 		dataType:'json',
 		success:function(data){
-			$('#product_Name').text(data.product_Name);
-			$('#product_Modle').text(data.product_Modle);
-			$('#hw_ver').text(data.hw_ver);
-			$('#fw_ver').text(data.fw_ver);
+			$('#productName').text(data.pName);
+			$('#productModle').text(data.pModle);
+			$('#softVersion').text(data.sVer);
 
 		}
 	});
@@ -87,8 +88,9 @@ function deviceInfo(){
 function MemoryUsageRate(){
 	$.ajax({
 		type:"get",
-		url:"",
+		url:"/goform/queryVer",
 		async:true,
+		dateType:"json",
 		success:function(data){
 			
 		}

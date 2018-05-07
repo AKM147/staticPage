@@ -15,13 +15,13 @@ function resetDev(){
 	});
 }
 //恢复出厂设置--提交
-function RestoreSetting(){
+function sysReset(){
 	$.ajax({
 		type:"post",
-		url:"",
+		url:"/goform/sysReset",
 		async:true,
 		success:function(data){
-			
+			alert("请重新启动设备！");
 		}
 	});
 }

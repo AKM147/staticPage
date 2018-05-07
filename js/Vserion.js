@@ -17,13 +17,18 @@ function VersionInfo(){
 }
 
 //版本升级--提交
-function VserionUpdate(){
+function upldForm(){
 	$.ajax({
 		type:"post",
-		url:"",
+		url:"/goform/upldForm",
+		enctype:"multipart/form-data",
 		async:true,
 		success:function(data){
-			
+			alert(data);
 		}
 	});
+}
+
+function uploadFileSubmit(){
+	alert("ok")
 }
