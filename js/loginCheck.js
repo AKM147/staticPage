@@ -50,7 +50,9 @@ function loginCheck(){
 	            window.location.replace("index.html");
 	            
 			} else{
-				layer.msg('用户名或者密码错误!', {  icon : 2,  time : 1000   });
+				//alert(data);
+				//layer.msg('用户名或者密码错误!', {icon: 2});
+				layer.msg('用户名或者密码错误!');
 			}
 			console.log("fanhuizhi"+data)
 		}

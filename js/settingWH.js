@@ -17,7 +17,7 @@ function resetDev(){
 //恢复出厂设置--提交
 function sysReset(){
 	$.ajax({
-		type:"post",
+		type:"get",
 		url:"/goform/sysReset",
 		async:true,
 		success:function(data){
