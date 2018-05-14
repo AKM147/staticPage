@@ -1,17 +1,23 @@
 //初始化加载
 $(function(){
-	
+	VersionInfo();
 });
 
 
 //版本信息--获取
 function VersionInfo(){
+	//alert(1);
 	$.ajax({
-		type:"post",
-		url:"",
+		type:"get",
+		url:"/goform/deviceInfo",
 		async:true,
+		dataType:'json',
 		success:function(data){
-			
+			//alert(2);
+			//$('#productName').text(data.pName);
+			//$('#productModle').text(data.pModle);
+			$('#softversion').text(data.sVer);
+
 		}
 	});
 }

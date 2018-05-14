@@ -4,13 +4,22 @@ $(function(){
 });
 
 //PING--提交
-function Ping(){
+function pingTest(){
 	$.ajax({
-		type:"post",
-		url:"",
+		type:"get",
+		url:"/goform/pingTest",
 		async:true,
+		data:{
+			pingAddr:$('#pingAddr').val(),
+			pingCount:$('#pingCount').val(),
+		},
 		success:function(data){
-			
+			$('#pingText').text(data);
 		}
 	});
+}
+
+function pingcancel(){
+	pingAddr:$('#pingAddr').val("");
+	pingCount:$('#pingCount').val("");
 }
