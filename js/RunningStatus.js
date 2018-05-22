@@ -112,7 +112,12 @@ function WANStatus(){
 			$('#netStatus').text(data.netStatus);
 			$('#simStatus').text(data.simStatus);
 			$('#ecmStatus').text(data.ecmStatus);
-			$('#csq').text(data.csq);
+
+			//$('#rssi').text(data.rssi);
+			$('#rsrp').text(data.rsrp);
+			$('#sinr').text(data.sinr);
+			//$('#rsrq').text(data.rsrq);
+			
 			$('#APN').text(data.apn);
 			$('#wanip').text(data.wanip);
 			$('#wanmask').text(data.wanmask);
