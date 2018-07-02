@@ -8,7 +8,7 @@ $(function(){
 =======
 	setInterval('sysInfo()',1000);
 >>>>>>> 7da1a33a67583f3250c652ced70fdf881e52d150*/
-	setInterval('doWork()',10000);
+	setInterval('doWork()',3000);
 });
 function doWork(){
 	//sysInfo();

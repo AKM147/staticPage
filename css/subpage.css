@@ -526,3 +526,11 @@ input, select ,radio
 .inputContent{
 	width: 10rem;height: 26px;
 }
+.securityLog{
+	width: 90%;
+background: #70d2ef;
+color: #FFF;
+overflow-y: scroll;
+margin: 5% auto;
+height: 200px;
+}
