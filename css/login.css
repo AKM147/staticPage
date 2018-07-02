@@ -33,5 +33,5 @@ label.error{display: block; -webkit-transition: border-color .15s ease-in-out,bo
     text-align: center;
     font-family:"Arial";
     position:absolute;
-    position:fixed;  bottom:20px; z-index: 999;
+    position:fixed;bottom:20px; z-index: 999;
 }
